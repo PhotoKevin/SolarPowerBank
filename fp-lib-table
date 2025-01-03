@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "SolarPowerBankLibrary")(type "KiCad")(uri "${KIPRJMOD}/SolarPowerBankLibrary.pretty")(options "")(descr ""))
+)
