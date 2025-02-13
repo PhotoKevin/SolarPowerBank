@@ -1,9 +1,9 @@
-(footprint "SON40P220X200X80-11N"
+(footprint "WSON-10-1EP_2.2x2.0mm_P0.4_ThermalVias-HandSolder"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
-	(descr "DLH0010A")
+	(descr "DLH (WSON, 10)")
 	(tags "Integrated Circuit")
 	(property "Reference" "U1"
 		(at -0.1 2.1775 0)
@@ -18,7 +18,7 @@
 		)
 	)
 	(property "Value" "BQ25185"
-		(at 0 0 0)
+		(at 0 -3 0)
 		(layer "F.SilkS")
 		(hide yes)
 		(uuid "f444df5c-80ce-4c05-8ca4-279fe1ae6eab")
@@ -29,8 +29,8 @@
 			)
 		)
 	)
-	(property "Footprint" "footprints:SON40P220X200X80-11N"
-		(at 0 3 0)
+	(property "Footprint" ""
+		(at 1 -3.5 0)
 		(layer "F.Fab")
 		(hide yes)
 		(uuid "7f15b7bc-0c0f-4631-96c3-e1f7734d1b20")
@@ -41,8 +41,8 @@
 			)
 		)
 	)
-	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25185.pdf?ts=1722005908424&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25185%253Fbm-verify%253DAAQAAAAJ_____6hVXXOfig1QrJYe5dcmy8OyrGCZv5oqgX6N77zS6YADkLiuOXdabWMQnL4cuTFBfOVMuK6g3Py6C890YoND-_6SSrIXMZJ2tQlivrzMzZ6HuICT7L24wuiqYV4l6MqbkRg4bRIdmAPjhMkP7h0XSu6y7-h4CgYJbRj4PP4C9wI4bKnu0WHtZrUTDism9XinBc6nfJy--5QQiaPKS2lWeoU5xdYm3rjkfwSqat7IitFp4Dc-00skjTGEPpJg96QO4kRbo0CAGj7PIJ3loMag8QMsoztZaT4B_mqdVA8bi1AdKRZX8GF5z0rfN_OKS5lZUYMWwiKsSVa-1seNBfbtv8HkhnhFlCq-s1lpE7mG7cDwUzA"
-		(at 0 5 0)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/bq25185.pdf"
+		(at 0 4.5 0)
 		(layer "F.Fab")
 		(hide yes)
 		(uuid "0749bebc-75e4-49ed-887d-b6c8726166b8")
@@ -118,16 +118,6 @@
 		(uuid "535d9faf-60f8-4278-8df4-223e1ec03662")
 	)
 	(fp_line
-		(start -1.1 -1)
-		(end 1.1 -1)
-		(stroke
-			(width 0.1)
-			(type solid)
-		)
-		(layer "F.Fab")
-		(uuid "ed2f5c9f-d7cf-4207-847d-22f89b709a14")
-	)
-	(fp_line
 		(start -1.1 -0.45)
 		(end -0.55 -1)
 		(stroke
@@ -138,8 +128,18 @@
 		(uuid "84430dfb-3dee-450d-bdd1-b797defaf05c")
 	)
 	(fp_line
-		(start -1.1 1)
-		(end -1.1 -1)
+		(start -1.05 -1)
+		(end 1.05 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ed2f5c9f-d7cf-4207-847d-22f89b709a14")
+	)
+	(fp_line
+		(start -1.05 1)
+		(end -1.05 -1)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -148,8 +148,8 @@
 		(uuid "1c5b1471-c552-4288-8db8-80b85cec2ec5")
 	)
 	(fp_line
-		(start 1.1 -1)
-		(end 1.1 1)
+		(start 1.05 -1)
+		(end 1.05 1)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -158,8 +158,8 @@
 		(uuid "4c4b24a7-5e2e-42ff-a75d-fdee4e2d17fa")
 	)
 	(fp_line
-		(start 1.1 1)
-		(end -1.1 1)
+		(start 1.05 1)
+		(end -1.05 1)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -168,7 +168,7 @@
 		(uuid "8aa17151-085a-44a6-8f32-25c57ee27cd2")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0.5 -3 0)
+		(at 0 0 0)
 		(layer "F.Fab")
 		(uuid "1a67215c-8600-4a3a-93ea-de86e4984082")
 		(effects
@@ -179,70 +179,88 @@
 		)
 	)
 	(pad "1" smd rect
-		(at -1.1 -0.8 90)
-		(size 0.2 0.75)
+		(at -1.15 -0.8)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "efcf58c6-ef55-4af1-8749-d85dbe7fd8f2")
 	)
 	(pad "2" smd rect
-		(at -1.1 -0.4 90)
-		(size 0.2 0.75)
+		(at -1.15 -0.4)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "9dbb482c-1491-4d42-b212-d665fa5c0802")
 	)
 	(pad "3" smd rect
-		(at -1.1 0 90)
-		(size 0.2 0.75)
+		(at -1.15 0)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "ab96e16e-432c-4ec8-bd97-d81ddd17e0ca")
 	)
 	(pad "4" smd rect
-		(at -1.1 0.4 90)
-		(size 0.2 0.75)
+		(at -1.15 0.4)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "cef5e1ff-3ea1-4caf-bab8-97b7af45cfe0")
 	)
 	(pad "5" smd rect
-		(at -1.1 0.8 90)
-		(size 0.2 0.75)
+		(at -1.15 0.8)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "5c4e4653-f345-4d46-9a19-628b2b8f5db0")
 	)
 	(pad "6" smd rect
-		(at 1.1 0.8 90)
-		(size 0.2 0.75)
+		(at 1.15 0.8)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "034a1347-b53a-4148-8b19-07c89841f58d")
 	)
 	(pad "7" smd rect
-		(at 1.1 0.4 90)
-		(size 0.2 0.75)
+		(at 1.15 0.4)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "83774a40-c8ec-43d2-8361-43b3ec55ba5d")
 	)
 	(pad "8" smd rect
-		(at 1.1 0 90)
-		(size 0.2 0.75)
+		(at 1.15 0)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "844e26d5-7b72-4924-9ba2-005cc9d48773")
 	)
 	(pad "9" smd rect
-		(at 1.1 -0.4 90)
-		(size 0.2 0.75)
+		(at 1.15 -0.4)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "94eee562-6b77-4961-8608-7955e37b10d6")
 	)
 	(pad "10" smd rect
-		(at 1.1 -0.8 90)
-		(size 0.2 0.75)
+		(at 1.15 -0.8)
+		(size 0.7 0.2)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "02e1c183-ee31-436c-b91a-6c91eaeb53e1")
 	)
+	(pad "11" thru_hole circle
+		(at 0 -0.5)
+		(size 0.6 0.6)
+		(drill 0.3)
+		(property pad_prop_heatsink)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(uuid "f7bd77fd-cc20-4ef3-9714-97c10dced1bb")
+	)
 	(pad "11" smd rect
 		(at 0 0)
-		(size 1 1.6)
+		(size 0.9 1.5)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "5228bc99-af9c-4a21-8edf-770baed32ebc")
+	)
+	(pad "11" thru_hole circle
+		(at 0 0.5)
+		(size 0.6 0.6)
+		(drill 0.3)
+		(property pad_prop_heatsink)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(uuid "3d1d4189-5f3b-4a3b-8e52-e9dd54855164")
 	)
 	(model "BQ25185DLHR.stp"
 		(offset
